@@ -1,14 +1,15 @@
-package com.flyair.booking.service;
+package flyair.booking.service;
 
-import com.flyair.booking.dto.request.LoginRequest;
-import com.flyair.booking.dto.request.RegisterRequest;
-import com.flyair.booking.dto.request.TwoFactorVerificationRequest;
-import com.flyair.booking.dto.response.AuthenticationResponse;
-import com.flyair.booking.dto.response.UserResponse;
-import com.flyair.booking.exception.BadRequestException;
-import com.flyair.booking.exception.UnauthorizedException;
-import com.flyair.booking.model.User;
-import com.flyair.booking.repository.UserRepository;
+import flyair.booking.dto.request.LoginRequest;
+import flyair.booking.dto.request.RegisterRequest;
+import flyair.booking.dto.request.ResetPasswordRequest;
+import flyair.booking.dto.request.TwoFactorVerificationRequest;
+import flyair.booking.dto.response.AuthenticationResponse;
+import flyair.booking.dto.response.UserResponse;
+import flyair.booking.exception.BadRequestException;
+import flyair.booking.exception.UnauthorizedException;
+import flyair.booking.model.User;
+import flyair.booking.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;

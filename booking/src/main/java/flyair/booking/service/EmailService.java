@@ -1,4 +1,4 @@
-package com.flyair.booking.service;
+package flyair.booking.service;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

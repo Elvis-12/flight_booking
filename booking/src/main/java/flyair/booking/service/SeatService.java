@@ -1,11 +1,11 @@
-package com.flyair.booking.service;
+package flyair.booking.service;
 
-import com.flyair.booking.dto.request.CreateSeatRequest;
-import com.flyair.booking.dto.response.SeatResponse;
-import com.flyair.booking.exception.BadRequestException;
-import com.flyair.booking.exception.ResourceNotFoundException;
-import com.flyair.booking.model.Seat;
-import com.flyair.booking.repository.SeatRepository;
+import flyair.booking.dto.request.CreateSeatRequest;
+import flyair.booking.dto.response.SeatResponse;
+import flyair.booking.exception.BadRequestException;
+import flyair.booking.exception.ResourceNotFoundException;
+import flyair.booking.model.Seat;
+import flyair.booking.repository.SeatRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
