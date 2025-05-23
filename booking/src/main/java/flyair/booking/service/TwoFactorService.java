@@ -1,7 +1,9 @@
-package com.flyair.booking.service;
+package flyair.booking.service;
 
 import dev.samstevens.totp.code.*;
+import dev.samstevens.totp.exceptions.CodeGenerationException;
 import dev.samstevens.totp.exceptions.QrGenerationException;
+import dev.samstevens.totp.exceptions.TimeProviderException;
 import dev.samstevens.totp.qr.QrData;
 import dev.samstevens.totp.qr.QrGenerator;
 import dev.samstevens.totp.qr.ZxingPngQrGenerator;
@@ -68,8 +70,10 @@ public class TwoFactorService {
     
     /**
      * Generate a TOTP code for testing purposes
+     * @throws CodeGenerationException 
+     * @throws TimeProviderException 
      */
-    public String generateCode(String secret) {
+    public String generateCode(String secret) throws TimeProviderException, CodeGenerationException {
         return codeGenerator.generate(secret, Math.floorDiv(timeProvider.getTime(), 30));
     }
     

@@ -1,13 +1,13 @@
-package com.flyair.booking.service;
+package flyair.booking.service;
 
-import com.flyair.booking.dto.request.ChangePasswordRequest;
-import com.flyair.booking.dto.request.ResetPasswordRequest;
-import com.flyair.booking.dto.request.UpdateUserRequest;
-import com.flyair.booking.dto.response.UserResponse;
-import com.flyair.booking.exception.ResourceNotFoundException;
-import com.flyair.booking.exception.BadRequestException;
-import com.flyair.booking.model.User;
-import com.flyair.booking.repository.UserRepository;
+import flyair.booking.dto.request.ChangePasswordRequest;
+import flyair.booking.dto.request.ResetPasswordRequest;
+import flyair.booking.dto.request.UpdateUserRequest;
+import flyair.booking.dto.response.UserResponse;
+import flyair.booking.exception.ResourceNotFoundException;
+import flyair.booking.exception.BadRequestException;
+import flyair.booking.model.User;
+import flyair.booking.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;

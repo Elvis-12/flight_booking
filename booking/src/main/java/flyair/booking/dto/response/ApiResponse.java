@@ -38,6 +38,14 @@ public class ApiResponse<T> {
                 .build();
     }
     
+    public static <T> ApiResponse<T> success(String message) {
+        return ApiResponse.<T>builder()
+                .success(true)
+                .message(message)
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+    
     public static <T> ApiResponse<T> error(String error) {
         return ApiResponse.<T>builder()
                 .success(false)
@@ -51,6 +59,26 @@ public class ApiResponse<T> {
                 .success(false)
                 .message(message)
                 .error(error)
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+    
+    // New method to handle data in error responses (like validation errors)
+    public static <T> ApiResponse<T> error(String message, T data) {
+        return ApiResponse.<T>builder()
+                .success(false)
+                .message(message)
+                .data(data)
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+    
+    // Method specifically for validation errors
+    public static ApiResponse<Object> validationError(String message, Object validationErrors) {
+        return ApiResponse.builder()
+                .success(false)
+                .message(message)
+                .data(validationErrors)
                 .timestamp(LocalDateTime.now())
                 .build();
     }
